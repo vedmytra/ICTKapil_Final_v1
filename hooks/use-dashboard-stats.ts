@@ -95,7 +95,10 @@ function computeStats(trades: Trade[]): DashboardStats {
   let streak = 0;
   const firstIsWin = (sorted[sorted.length - 1]?.pnl ?? 0) > 0;
   for (let i = sorted.length - 1; i >= 0; i--) {
-    const isWin = (sorted[i].pnl ?? 0) > 0;
+    const trade = sorted[i];
+if (!trade) continue;
+
+const isWin = (trade.pnl ?? 0) > 0;
     if (isWin === firstIsWin) streak++;
     else break;
   }
