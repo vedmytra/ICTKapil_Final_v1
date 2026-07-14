@@ -1,0 +1,13 @@
+{
+  "name": "IctKapil — Forex Trading Cockpit",
+  "short_name": "IctKapil",
+  "description": "Premium ICT / Smart Money Concepts trading journal, backtester and dashboard.",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#0d0b0a",
+  "theme_color": "#161316",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
