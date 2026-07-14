@@ -26,7 +26,7 @@ const emptyForm: NewStrategy = {
   timeframes: [],
   markets: [],
   tags: [],
-  color: STRATEGY_COLORS[0],
+  color: STRATEGY_COLORS[0] ?? "#3B82F6",
 };
 
 function StrategyForm({
