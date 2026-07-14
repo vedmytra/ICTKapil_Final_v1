@@ -159,7 +159,9 @@ export default function JournalPage() {
 
   const handleImport = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!user || !e.target.files?.length) return;
-    const file = e.target.files[0];
+    const file = e.target.files?.[0];
+
+if (!file) return;
     const { valid, errors } = await parseTradesCSV(file);
     setImportErrors(errors.map((er) => `Row ${er.row}: ${er.message}`));
     for (const trade of valid) {
